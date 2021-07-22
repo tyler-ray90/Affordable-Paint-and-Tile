@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+
+// Router from React Domg
+import {Route, Switch, Link} from 'react-router-dom';
+
+// Imported Pages
+import Contact from './Pages/Contact';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+      This is the header
       </header>
+      <Switch>
+      <Route path='/contact'>
+      <Contact/>
+      </Route>
+      </Switch>
     </div>
   );
 }
